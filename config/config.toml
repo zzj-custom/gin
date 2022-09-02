@@ -30,7 +30,7 @@ read_timeout = 2
 [email]
 from = "1844066417@qq.com"
 username = "1844066417@qq.com"
-password = "dvadduvlkozmbeda"
+password = "xxxx"
 host = "smtp.qq.com"
 port = 25
 
