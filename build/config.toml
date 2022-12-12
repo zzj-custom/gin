@@ -1,0 +1,68 @@
+[server]
+host = "0.0.0.0:8081"
+read_timeout = "60s"
+read_header_timeout = "60s"
+write_timeout = "60s"
+app_name = "test"
+
+[database.go]
+dsn = "root:@tcp(127.0.0.1:3306)/go?parseTime=true&loc=Local"
+host = "127.0.0.1"
+port = 3306
+username = "root"
+password = ""
+database = "go"
+max_open_conn = 10  # 最大数据库连接数
+max_idle_conn = 5 # 最大空闲连接数
+conn_max_free_time = 120 # 最大空闲时间
+conn_max_life_time = 3600 # 数据库链接最大生存时间
+use_log = true
+log_level = 4
+model_path = '../internal/model'
+
+[redis]
+host = "127.0.0.1"
+port = 6379
+database = 0
+connect_timeout = 5
+read_timeout = 2
+
+[email]
+from = "1844066417@qq.com"
+username = "1844066417@qq.com"
+password = "dvadduvlkozmbeda"
+host = "smtp.qq.com"
+port = 25
+
+[jwt]
+token_secret = "secret"
+aes_key = "abcdefghijklsmno"
+salt = "go-api"
+
+[logger]
+file_path = "/Users/zouzhujia/Applications/github/go-api/runtime"
+file_name = "system.log"
+log_level = 6
+
+[kafka]
+host = "localhost"
+port = 9092
+topic = "mytopic"
+client_id = "client_id"
+group = "my_group"
+assignor="range"
+
+[feishu]
+url= "https://open.feishu.cn/open-apis/bot/v2/hook"
+web_hook_uuid = "f056f5b8-db9a-4070-9b89-ae5984fd73a6"
+secret="meY9UP7ARsuE1btBce6R5"
+level="warn"
+
+[nacos]
+host = "nacos.12301.sz"
+port = 80
+namespace_id = "eb62145e-c71e-488a-98b0-51da84d15663"
+context_path = "nacos"
+scheme = "http"
+timeout_ms = 5000
+page_size = 20

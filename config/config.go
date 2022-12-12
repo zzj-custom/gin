@@ -19,7 +19,7 @@ import (
 var (
 	globalConfig *config
 	configOnce   sync.Once
-	Toml         = "../config/config.toml"
+	Toml         = "./config.toml"
 )
 
 type duration struct {

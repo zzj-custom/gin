@@ -32,7 +32,7 @@ func usage() {
 }
 
 func init() {
-	flag.StringVar(&config.Toml, "c", "../config/config.toml", "配置文件路径")
+	flag.StringVar(&config.Toml, "c", "./config.toml", "配置文件路径")
 }
 
 func main() {

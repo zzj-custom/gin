@@ -11,7 +11,7 @@ import (
 func TestSendMail(t *testing.T) {
 	resStr := fmt.Sprintf("恭喜您：%s，注册成功", "邹祝家")
 	// 初始化参数
-	el := config.ParseConfigFile("../config/config.toml").Email
+	el := config.ParseConfigFile("./config.toml").Email
 	email.InitPool(el)
 	err := el.SendMail(
 		[]string{"1844066417@qq.com"},
